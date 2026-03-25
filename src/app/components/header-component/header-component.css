@@ -1,0 +1,10 @@
+.header {
+  width: 100%;
+  background-color: lightblue;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.title {
+  text-decoration: underline;
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {NoteCardComponent} from './note-card-component/note-card-component';
 
 @Component({
@@ -8,5 +8,12 @@ import {NoteCardComponent} from './note-card-component/note-card-component';
   styleUrl: './left-site-component.css',
 })
 export class LeftSiteComponent {
+
+  @Output() triggerToClearInputField = new EventEmitter<boolean>();
+
+  newNoteButton()
+  {
+    this.triggerToClearInputField.emit(true);
+  }
 
 }

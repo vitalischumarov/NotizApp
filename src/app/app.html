@@ -1,9 +1,9 @@
 <app-header-component></app-header-component>
 <div class="content-container">
-  <app-left-site-component class="left-container"></app-left-site-component>
-  <app-main-area-component></app-main-area-component>
+  <app-left-site-component (triggerToClearInputField) = "clearFields($event)" [allNotesInChild]="allNotesInParent"></app-left-site-component>
+  <app-main-area-component [value]="toggle" [toggleSave]="toggleSave" (notesToDisplay) = "currentNotes($event)"></app-main-area-component>
   <div class="button-container">
-    <button>save</button>
+    <button (click)="saveNote()">save</button>
     <button>delete</button>
   </div>
 </div>

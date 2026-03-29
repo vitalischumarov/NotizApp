@@ -1,5 +1,7 @@
 <div class="container">
   <button (click)="newNoteButton()">New Note</button>
-  <app-note-card-component></app-note-card-component>
-  <app-note-card-component></app-note-card-component>
+  @for (note of allNotesInChild(); track note.id)
+  {
+    <app-note-card-component></app-note-card-component>
+  }
 </div>

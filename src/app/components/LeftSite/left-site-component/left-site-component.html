@@ -2,6 +2,6 @@
   <button (click)="newNoteButton()">New Note</button>
   @for (note of allNotesInChild(); track note.id)
   {
-    <app-note-card-component></app-note-card-component>
+    <app-note-card-component [title]="note.title" [description]="note.description" [date]="note.date"></app-note-card-component>
   }
 </div>
